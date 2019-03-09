@@ -1,7 +1,7 @@
 //rcredux can be used to create this
 import React, { Component } from "react";
 import { connect } from "react-redux";
-
+import Tweet from "./Tweet";
 export class Dashboard extends Component {
   render() {
     return (
@@ -10,8 +10,9 @@ export class Dashboard extends Component {
         <ul className="dashboard-list">
           {this.props.tweetIds.map(id => (
             <li key={id}>
-              {" "}
-              <div> Tweet Id: {id}</div>
+              <div>
+                <Tweet id={id} />
+              </div>
             </li>
           ))}
         </ul>
